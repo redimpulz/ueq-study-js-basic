@@ -1,11 +1,27 @@
 // ループ・配列・データ型の問題
 export const func1 = (n) => {
-  return [];
+  if (Number.isInteger(n) && n > 0) {
+    return Array.from({ length: n }, (_, index) => index + 1);
+  } else {
+    return [];
+  }
 };
 
 // 条件分岐・データ型の問題
 export const func2 = (n) => {
-  return "";
+  if (Number.isInteger(n) && n > 0) {
+    if (n % 3 === 0 && n % 5 === 0) {
+      return "FizzBuzz";
+    } else if (n % 3 === 0) {
+      return "Fizz";
+    } else if (n % 5 === 0) {
+      return "Buzz";
+    } else {
+      return n.toString();
+    }
+  } else {
+    return "error";
+  }
 };
 
 const main = () => {
